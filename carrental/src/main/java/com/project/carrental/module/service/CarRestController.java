@@ -1,5 +1,7 @@
-package com.project.carrental.module.car;
+package com.project.carrental.module.service;
 
+import com.project.carrental.module.entity.CarEntity;
+import com.project.carrental.module.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

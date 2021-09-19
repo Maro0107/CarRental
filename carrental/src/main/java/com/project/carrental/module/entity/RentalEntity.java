@@ -1,4 +1,4 @@
-package com.project.carrental.module.rental;
+package com.project.carrental.module.entity;
 
 import javax.persistence.*;
 

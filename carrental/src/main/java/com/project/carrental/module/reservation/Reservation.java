@@ -17,7 +17,8 @@ public class Reservation {
     @Column(name = "car")
     private String car;
     @Column(name = "dateFrom")
-    private java.sql.Date dateFrom;
+//    private java.sql.Date dateFrom;
+    private Date dateFrom;
     @Column(name = "dateTo")
     private java.sql.Date dateTo;
     @Column(name = "rentDepartment")
