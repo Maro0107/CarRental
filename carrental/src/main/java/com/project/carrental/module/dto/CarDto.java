@@ -1,36 +1,34 @@
-package com.project.carrental.module.entity;
+package com.project.carrental.module.dto;
 
-import javax.persistence.*;
+import com.project.carrental.module.entity.CarEntity;
 
-@Entity
-@Table(name = "car")
-public class CarEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+import javax.persistence.Column;
+
+public class CarDto {
     private Long id;
-    @Column(name = "brand")
     private String brand;
-    @Column(name = "model")
     private String model;
-    @Column(name = "body_type")
     private String bodyType;
-    @Column(name = "colour")
     private String colour;
-    @Column(name = "prod_date")
     private Long prodDate;
-    @Column(name = "mileage")
     private Long mileage;
-    @Column(name = "amount")
     private Long amount;
-    @Column(name = "status")
     private String status;
+
+    public Long getId() {
+        return id;
+    }
+
+    public CarDto setId(Long id) {
+        this.id = id;
+        return this;
+    }
 
     public String getBrand() {
         return brand;
     }
 
-    public CarEntity setBrand(String brand) {
+    public CarDto setBrand(String brand) {
         this.brand = brand;
         return this;
     }
@@ -39,7 +37,7 @@ public class CarEntity {
         return model;
     }
 
-    public CarEntity setModel(String model) {
+    public CarDto setModel(String model) {
         this.model = model;
         return this;
     }
@@ -48,7 +46,7 @@ public class CarEntity {
         return bodyType;
     }
 
-    public CarEntity setBodyType(String bodyType) {
+    public CarDto setBodyType(String bodyType) {
         this.bodyType = bodyType;
         return this;
     }
@@ -57,7 +55,7 @@ public class CarEntity {
         return colour;
     }
 
-    public CarEntity setColour(String colour) {
+    public CarDto setColour(String colour) {
         this.colour = colour;
         return this;
     }
@@ -66,7 +64,7 @@ public class CarEntity {
         return prodDate;
     }
 
-    public CarEntity setProdDate(Long prodDate) {
+    public CarDto setProdDate(Long prodDate) {
         this.prodDate = prodDate;
         return this;
     }
@@ -75,7 +73,7 @@ public class CarEntity {
         return mileage;
     }
 
-    public CarEntity setMileage(Long mileage) {
+    public CarDto setMileage(Long mileage) {
         this.mileage = mileage;
         return this;
     }
@@ -84,7 +82,7 @@ public class CarEntity {
         return amount;
     }
 
-    public CarEntity setAmount(Long amount) {
+    public CarDto setAmount(Long amount) {
         this.amount = amount;
         return this;
     }
@@ -93,17 +91,8 @@ public class CarEntity {
         return status;
     }
 
-    public CarEntity setStatus(String status) {
+    public CarDto setStatus(String status) {
         this.status = status;
-        return this;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public CarEntity setId(Long id) {
-        this.id = id;
         return this;
     }
 }
