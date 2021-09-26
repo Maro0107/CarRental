@@ -21,10 +21,6 @@ public class CarController {
         return CarMapper.map(carService.getOneById(id));
     }
 
-//@GetMapping(value = "/api/car/{colour}")
-//public CarDto getCar(@PathVariable String colour) {
-//    return CarMapper.map(carService.getAll());
-//}
 
 
     @GetMapping("/api/car")

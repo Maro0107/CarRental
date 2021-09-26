@@ -1,13 +1,97 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-  <link media="all" rel="stylesheet"
-        href="//netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-</head>
-  <body>
-    <h1>CARRENTAL</h1>
-  </body>
-</html>
 
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!-- head.html:START-->
+<div th:replace="home/fragments/head.html :: template"></div>
+<!-- head.html:END-->
+
+
+
+<body>
+
+<div class="container">
+
+  <!-- header.html:START-->
+  <div th:replace="home/fragments/header.html :: template"></div>
+  <!-- header.html:END -->
+
+<!--  &lt;!&ndash; buttons.html:START&ndash;&gt;-->
+<!--  <div th:replace="home/fragments/buttons.html :: template"></div>-->
+<!--  &lt;!&ndash; buttons.html:END &ndash;&gt;-->
+
+  <!-- menu.html:START-->
+<!--  <div th:replace="home/fragments/menu.html :: template"></div>-->
+  <div th:replace="home/fragments/menu.html :: template(items=${menuItems})"></div>
+  <!--    <div th:replace="blog/fragments/menu.html :: template(items=${menuSubItems})"></div>-->
+  <!-- menu.html:END-->
+
+  <!-- banner.html:START-->
+  <div th:replace="home/fragments/banner.html :: template"></div>
+  <!-- banner.html:END-->
+
+<!--  <div>-->
+<!--  <ul class="nav nav-tabs">-->
+<!--    <li class="nav-item">-->
+<!--      <a class="nav-link active" href="#">Active</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item dropdown">-->
+<!--      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>-->
+<!--      <div class="dropdown-menu">-->
+<!--        <a class="dropdown-item" href="#">Action</a>-->
+<!--        <a class="dropdown-item" href="#">Another action</a>-->
+<!--        <a class="dropdown-item" href="#">Something else here</a>-->
+<!--        <div class="dropdown-divider"></div>-->
+<!--        <a class="dropdown-item" href="#">Separated link</a>-->
+<!--      </div>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--      <a class="nav-link" href="#">Link</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--      <a class="nav-link disabled" href="#">Disabled</a>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--  ></div>-->
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <!-- post-widget.html:START-->
+      <!--            <div th:replace="blog/fragments/post-widget.html :: template"></div>-->
+      <!-- post-widget.html:END-->
+    </div>
+    <div class="col-md-6">
+      <!-- post-widget.html:START-->
+      <!--            <div th:replace="blog/fragments/post-widget.html :: template"></div>-->
+      <!-- post-widget.html:END-->
+    </div>
+  </div>
+</div>
+
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <!-- post.html:START -->
+      <section th:each="post : ${posts}">
+        <div th:replace="home/fragments/post.html :: template(post=${post})"></div>
+      </section>
+      <!-- post.html:END -->
+    </div>
+
+    <aside class="col-md-4 blog-sidebar">
+
+      <!-- about.html:START -->
+      <div th:replace="home/fragments/about.html :: template"></div>
+      <!-- about.html:START -->
+
+    </aside>
+  </div>
+</main>
+
+<!-- footer.html:START -->
+<div th:replace="home/fragments/footer.html :: template"></div>
+<!-- footer.html:START -->
+
+</body>
+
+</html>
