@@ -1,0 +1,34 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<h1>th:replace="home/car :: template"</h1>-->
+<!--&lt;!&ndash;        <div th:replace="home/car :: template"></div>&ndash;&gt;-->
+
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+        <meta charset="UTF-8">
+        <title>Fragment Template</title>
+</head>
+<body>
+
+<!--<section th:fragment="template"> ..content… </section>-->
+
+<div th:fragment="template(car)" class="home-car">
+<!--        <h2 class="blog-post-title" th:text="${post.title}">...</h2>-->
+
+<!--        <p class="blog-post-meta">-->
+<!--                <span th:text="${post.date}"></span> <a href="#" th:text="${post.author}">Mark</a>-->
+<!--        </p>-->
+
+        <p th:text="${car}"></p>
+
+        <a th:href="@{/car/{id}(id=${car.id})}">view</a>
+
+</div>
+
+</body>
+</html>
