@@ -26,6 +26,21 @@ public class CarEntity {
     @Column(name = "status")
     private String status;
 
+    public CarEntity(Long id, String brand, String model, String bodyType, String colour, Long prodDate, Long mileage, Long amount, String status) {
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+        this.bodyType = bodyType;
+        this.colour = colour;
+        this.prodDate = prodDate;
+        this.mileage = mileage;
+        this.amount = amount;
+        this.status = status;
+    }
+
+    public CarEntity() {
+    }
+
     public String getBrand() {
         return brand;
     }

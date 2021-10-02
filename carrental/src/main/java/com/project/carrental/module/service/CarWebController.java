@@ -24,20 +24,25 @@ public class CarWebController {
     private CarService carService;
 
     @GetMapping({
-            "/home/{id}",
-            "/home/{id}.html",
-            "/home/{id}.php"
+//            "/home/{id}",
+//            "/home/{id}.html",
+//            "/home/{id}.php"
+            "/home/car/{id}.html"
     })
-    public String getBlogPost(@PathVariable("id") Long id,
-                              Model model) {
+//    public String getBlogPost(@PathVariable("id") Long id,
+//                              Model model) {
 
+        public String getCar(@PathVariable("id") Long id,
+                Model model) {
+//        CarEntity car = carService.getOneById(id);
         CarEntity car = carService.getOneById(id);
         List<MenuDto> menuItems = menuService.getMenu();
 
         model.addAttribute("car", car);
         model.addAttribute("menuItems", menuItems);
 
-        return "home/car.html";
+//        return "home/car.html";
+        return "/home/car.html";
     }
 
 
