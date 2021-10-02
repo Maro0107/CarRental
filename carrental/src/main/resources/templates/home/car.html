@@ -1,39 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-
-<!--&lt;!&ndash;        <div th:replace="home/car :: template"></div>&ndash;&gt;-->
 <body>
-
-<!--<h1>th:replace="home/car :: template"</h1>-->
-<p th:text="${car}"></p>
+<h4 class="font-italic">BRAND:</h4>
+<p th:text="${car.brand}"></p>
+<h4 class="font-italic">MODEL:</h4>
+<p th:text="${car.model}"></p>
+<h4 class="font-italic">BODY TYPE:</h4>
+<p th:text="${car.bodyType}"></p>
+<h4 class="font-italic">COLOUR:</h4>
+<p th:text="${car.colour}"></p>
+<h4 class="font-italic">PRODUCTION DATE:</h4>
+<p th:text="${car.prodDate}"></p>
+<h4 class="font-italic">MILEAGE:</h4>
+<p th:text="${car.mileage}"></p>
+<h4 class="font-italic">AMOUNT:</h4>
+<p th:text="${car.amount}"></p>
+<h4 class="font-italic">STATUS:</h4>
+<p th:text="${car.status}"></p>
 
 </body>
-
 </html>
-
-<!--<!DOCTYPE html>-->
-<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
-<!--<head>-->
-<!--        <meta charset="UTF-8">-->
-<!--        <title>Fragment Template</title>-->
-<!--</head>-->
-<!--<body>-->
-
-<!--&lt;!&ndash;<section th:fragment="template"> ..content… </section>&ndash;&gt;-->
-
-<!--<div th:fragment="template(car)" class="home-car">-->
-<!--&lt;!&ndash;        <h2 class="blog-post-title" th:text="${post.title}">...</h2>&ndash;&gt;-->
-
-<!--&lt;!&ndash;        <p class="blog-post-meta">&ndash;&gt;-->
-<!--&lt;!&ndash;                <span th:text="${post.date}"></span> <a href="#" th:text="${post.author}">Mark</a>&ndash;&gt;-->
-<!--&lt;!&ndash;        </p>&ndash;&gt;-->
-
-<!--        <p th:text="${car}"></p>-->
-
-<!--        <a th:href="@{/car/{id}(id=${car.id})}">view</a>-->
-
-<!--</div>-->
-
-<!--</body>-->
-<!--</html>-->
